@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { posts, Post } from "@/data/post"
 export default function Page(){
     return(
