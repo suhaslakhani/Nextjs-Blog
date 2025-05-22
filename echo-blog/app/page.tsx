@@ -10,10 +10,6 @@ export default function Home() {
       {/* <Navbar /> */}
       <div className="container mx-auto">
 
-        <Link href="/blog">
-          <p className="text-4xl my-20  p-5 shadow-xl">My First Blog</p>
-        </Link>
-
         <HomePage />
 
 

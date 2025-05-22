@@ -4,6 +4,7 @@ export type Post = {
     description: string;
     slug: string;
     content: string;
+    author: string;
 }
 
 export const posts:Post[] = [
@@ -17,7 +18,8 @@ export const posts:Post[] = [
       This post will cover how I started learning web development,
       why I chose Next.js, and the lessons I learned along the way.
 
-      Thanks for reading!`
+      Thanks for reading!`,
+      author:"john doe"
     },
     {
         id: 2,
@@ -28,6 +30,7 @@ export const posts:Post[] = [
             Next.js is a powerful React framework that lets you build modern
             web applications with ease. In this post, we'll go over its features,
             like routing, API routes, and server-side rendering.
-            `
+            `,
+            author: "jane smith"
     },
 ];

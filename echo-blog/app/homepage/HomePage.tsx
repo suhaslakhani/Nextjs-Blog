@@ -11,6 +11,7 @@ export default function Page(){
                         {posts.map((post: Post) => (
                             <div key={post.id} className="border-b pb-4">
                                 <h2 className="text-xl font-semibold">{post.title}</h2>
+                                <p className="text-sm text-gray-500">By {post.author}</p>
                                 <p className="text-gray-600 mt-1">{post.description}</p>
                                 <a href={`/post/${post.slug}`} className="text-blue-600 mt-2 inline-block">Read more →</a>
                             </div>
