@@ -17,7 +17,7 @@ export default function BlogPostPage({ params }:Props){
             <section>
                 <div className="max-w-3xl mx-auto p-6">
                     <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-                    <p className="text-sm text-gray-500 mb-4">By {post.author}</p>
+                    {/* <p className="text-sm text-gray-500 mb-4">By {post.author}</p> */}
                     <p className="text-gray-600 italic mb-6">{post.description}</p>
                     <article className="prose prose-lg text-gray-800 whitespace-pre-line">
                         {post.content}
