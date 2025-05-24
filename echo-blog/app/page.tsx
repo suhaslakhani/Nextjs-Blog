@@ -1,6 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import { posts, Post } from "@/data/post"
+
+function handleClick() {
+    console.log('increment like count');
+  }
+
 export default function Page(){
     return(
         <main>
@@ -14,6 +19,30 @@ export default function Page(){
                                 <Image src={post.image} alt="Image" width={800} height={0}/>
                                 <p className="text-gray-600 mt-1">{post.description}</p>
                                 <a href={`/blogs/${post.slug}`} className="text-blue-600 mt-2 inline-block">Read more →</a>
+                                <div className="flex items-center justify-between">
+                                    {post.tags && (
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                        {post.tags.map((tag, index) => (
+                                            <span
+                                                key={index}
+                                                className="bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full"
+                                            >
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                                <p className="text-sm text-gray-500 pt-3"> Created at
+                                    {new Date(post.date).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "short",
+                                        day: "numeric"
+                                    })}
+                                </p>
+                                </div>
+                                <div>
+                                    <i onClick={handleClick} className="ri-heart-line"></i>
+                                </div>
                             </div>
                         ))}
                     </div>

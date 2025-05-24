@@ -5,7 +5,8 @@ export type Post = {
     slug: string;
     content: string;
     image: string;
-
+    tags: string[];
+    date: string;
 }
 
 export const posts:Post[] = [
@@ -19,8 +20,9 @@ export const posts:Post[] = [
             why I chose Next.js, and the lessons I learned along the way.
 
             Thanks for reading!`,
-       image:"https://picsum.photos/id/1/800/500",
-        
+        image:"https://picsum.photos/id/1/800/500",
+        tags:["tag1","tag2","tag3"],
+        date: "2024-06-01",
     },
     {
         id: 2,
@@ -33,7 +35,8 @@ export const posts:Post[] = [
             like routing, API routes, and server-side rendering.
             `,
         image:"https://picsum.photos/id/6/800/500",
-        
+        tags:['tag1','tag2','tag3'],
+        date: "2024-06-01",
     },
     {
         id: 3,
@@ -46,6 +49,7 @@ export const posts:Post[] = [
             like routing, API routes, and server-side rendering.
             `,
         image:"https://picsum.photos/id/9/800/500",
-
+        tags:['tag1','tag2','tag3'],
+        date: "2024-06-01",
     },
 ];
