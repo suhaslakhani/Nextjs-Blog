@@ -7,6 +7,8 @@ export type Post = {
     image: string;
     tags: string[];
     date: string;
+    total: number;
+    like: boolean
 }
 
 export const posts:Post[] = [
@@ -23,6 +25,8 @@ export const posts:Post[] = [
         image:"https://picsum.photos/id/1/800/500",
         tags:["tag1","tag2","tag3"],
         date: "2024-06-01",
+        total: 701,
+        like: false
     },
     {
         id: 2,
@@ -37,6 +41,8 @@ export const posts:Post[] = [
         image:"https://picsum.photos/id/6/800/500",
         tags:['tag1','tag2','tag3'],
         date: "2024-06-01",
+        total: 500,
+        like: false
     },
     {
         id: 3,
@@ -51,5 +57,7 @@ export const posts:Post[] = [
         image:"https://picsum.photos/id/9/800/500",
         tags:['tag1','tag2','tag3'],
         date: "2024-06-01",
+        total: 8060,
+        like: false
     },
 ];

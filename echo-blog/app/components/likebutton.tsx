@@ -1,12 +1,40 @@
-'use client'
+"use client";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { useState } from "react";
+import { log } from "console";
 
-import { useState } from "react"
+// const props = {
+//   like: false,
+//   total: 0
+// }
 
-export default function LikeButton(){
-    const [liked,setliked] = useState(false)
-    return(
-        <div className="pt-4">
-            <button onClick={() => setliked(!liked)}>{liked ? 'liked' : 'notliked'}</button>
-        </div>    
-)
+interface LikeButtonProps {
+  like: boolean;
+  total: number;
+}
+
+export default function LikeButton(props: LikeButtonProps) {
+  const [total, setTotal] = useState(props.total);
+  const [liked, setLiked] = useState(props.like);
+  return (
+    <div className="pt-4 flex gap-1 justify-end">
+      <div>
+        {liked ? (
+          <FaHeart onClick={()=>{
+            setLiked(!liked)
+            setTotal(total - 1)
+          }} fontSize={24} className="text-red-600" />
+        ) : (
+          <FaRegHeart
+          onClick={()=>{
+            setLiked(!liked)
+            setTotal(total + 1)
+          }}
+           fontSize={24} />
+        )}
+      </div>
+      <span>{total}</span>
+    </div>
+  );
 }
