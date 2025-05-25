@@ -1,15 +1,15 @@
-import createMDX from '@next/mdx'
+// import createMDX from '@next/mdx'
  
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  images: {
-    domains: ['picsum.photos'],
-  },
-}
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+//   images: {
+//     domains: ['picsum.photos'],
+//   },
+// }
  
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-})
+// const withMDX = createMDX({
+//   extension: /\.(md|mdx)$/,
+// })
  
-export default withMDX(nextConfig)
+// export default withMDX(nextConfig)

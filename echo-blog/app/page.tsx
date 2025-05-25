@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { posts, Post } from "@/data/post"
+import LikeButton from "./components/likebutton";
 
 function handleClick() {
     console.log('increment like count');
@@ -41,7 +42,8 @@ export default function Page(){
                                 </p>
                                 </div>
                                 <div>
-                                    <i onClick={handleClick} className="ri-heart-line"></i>
+                                    <LikeButton />
+                                    {/* <i onClick={handleClick} className="ri-heart-line"></i> */}
                                 </div>
                             </div>
                         ))}
