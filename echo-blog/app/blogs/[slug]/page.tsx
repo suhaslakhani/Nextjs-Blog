@@ -16,8 +16,8 @@ export default function BlogPostPage({ params }:Props){
     return (
         <main>
             <section>
-                <div className="max-w-3xl mx-auto p-6">
-                    <Link href="/" className="text-blue-600 hover:underline mb-4 inline-block">
+                <div className="max-w-sm mx-auto p-6">
+                    <Link href="/" className="text-blue-600 hover:undeline mb-4 inline-block">
                         ← Back to Blog
                     </Link>
                     <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
